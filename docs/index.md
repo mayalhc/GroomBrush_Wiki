@@ -14,7 +14,7 @@ Groom Brush is sold on Fab by [Chamiseul Studio Ci](https://www.fab.com/sellers/
 
 | | |
 |---|---|
-| Engine | Unreal Engine 5.8 or 5.9 (one source package for each) |
+| Engine | Unreal Engine 5.8 |
 | Platform | Windows 64-bit, editor only (nothing is added to packaged games) |
 | Required plugin | **Groom** (plugin name `HairStrands`). It is enabled automatically together with Groom Brush. |
 | Content | A Groom Asset (strand based hair) used by a Groom Component in your level, for example MetaHuman hair or your own grooms. |
@@ -178,17 +178,16 @@ The editor-only function library `GroomBrush` (category *GroomBrush*) can be cal
 * **Slide and Add are Beta**: Slide is tested on bound MetaHuman grooms. Check the result and use Undo Stroke if it is not what you want.
 * **Zone moves nothing**: the brush must be over guides of a hair group that has at least two guides, the group must be ticked in the list, and the Into group (New zone or Into) must be set. A group is never emptied.
 * **Performance**: lower the brush radius, turn off *Live rebuild while dragging* and leave *Keep binding when roots unchanged* on.
-* **Other engine versions**: Groom Brush 0.2.0 supports Unreal Engine 5.8 and 5.9. Earlier versions such as 5.7 are not supported.
+* **Other engine versions**: Groom Brush currently supports Unreal Engine 5.8 only.
 
 ## 14. Release notes
 
-### 0.2.0 (Unreal Engine 5.8 and 5.9)
+### 0.2.0 (Unreal Engine 5.8)
 
 **New**
 
 * **Zone (Beta)** tool: moves the hair under the brush into its own hair group, so that the group can have its own simulation while the rest of the hair stays still. A *Sim* switch per hair group, *Into* / *Back* / *Merge*, and full Undo and Redo, also for the settings of the hair groups (see *Simulation zones*).
 * **Viewport hotkeys**: hold **B**, **N** or **M** and move the mouse sideways to change the brush radius, strength or falloff. **-** **=** step the strength, **;** **'** the falloff and **,** **.** the tip weight. **F** keeps focusing the viewport.
-* The plugin builds for **Unreal Engine 5.9** as well as 5.8. There is one source package per engine version.
 
 **Changed**
 
