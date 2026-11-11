@@ -1,4 +1,4 @@
-# Groom Brush — User Guide (v0.1.0)
+# Groom Brush — User Guide (v0.2.0)
 
 🇺🇸 English | [🇰🇷 한국어](./KO_index.md)
 
@@ -14,7 +14,7 @@ Groom Brush is sold on Fab by [Chamiseul Studio Ci](https://www.fab.com/sellers/
 
 | | |
 |---|---|
-| Engine | Unreal Engine 5.8 only |
+| Engine | Unreal Engine 5.8 or 5.9 (one source package for each) |
 | Platform | Windows 64-bit, editor only (nothing is added to packaged games) |
 | Required plugin | **Groom** (plugin name `HairStrands`). It is enabled automatically together with Groom Brush. |
 | Content | A Groom Asset (strand based hair) used by a Groom Component in your level, for example MetaHuman hair or your own grooms. |
@@ -50,6 +50,10 @@ A groom does not need a binding. If the groom has a Groom Binding, Groom Brush u
 | Ctrl + left mouse button | Invert the tool (spread, push, shrink, remove guides, erase mask ...) |
 | **1 ... 9**, **0** | Comb, Smooth, Cut, Clump, Lift, Length, Straighten, Frizz, Thin, Mask |
 | **[** and **]** | Smaller / bigger brush |
+| Hold **B**, **N** or **M** and move the mouse sideways | Adjust the brush radius (B), strength (N) or falloff (M) live (version 0.2). The brush stays where it is, and **F** keeps focusing the viewport |
+| **-** and **=** | Lower / higher strength (version 0.2) |
+| **;** and **'** | Lower / higher falloff (version 0.2) |
+| **,** and **.** | Lower / higher tip weight (version 0.2) |
 | Ctrl + Z, Ctrl + Shift + Z or Ctrl + Y | Undo stroke, redo stroke |
 | Esc while stroking | Cancel the stroke |
 | Middle mouse button | Viewport navigation as usual |
@@ -73,6 +77,7 @@ A groom does not need a binding. If the groom has a Groom Binding, Groom Brush u
 | **Puff** | Stands the hair up at the roots along the scalp normal for volume. Ctrl lays it down flat. |
 | **Slide (Beta)** | Moves whole hairs over the scalp, roots included. Tested on bound MetaHuman grooms. |
 | **Add (Beta)** | Plants new strands on the scalp under the brush, shaped like the hair around them. Ctrl thins. Works on strands. |
+| **Zone (Beta)** | Moves the hair under the brush into another hair group, so that the group can have its own simulation (see *Simulation zones*). Ctrl moves it back. |
 | **Mask** | Paints which hair the other tools may edit (see section 8). |
 
 Each tool shows its own options in the **TOOL OPTIONS** section of the panel.
@@ -97,7 +102,7 @@ Each tool shows its own options in the **TOOL OPTIONS** section of the panel.
 
 ### Update
 
-* *Rebuild on stroke end* commits a stroke when you release the mouse. *Rebuild delay* batches quick strokes. *Keep binding when roots unchanged* skips the binding rebuild and avoids hair flicker on MetaHuman grooms. *Live rebuild while dragging (Beta)* updates during the drag at the cost of a full rebuild per interval.
+* *Rebuild on stroke end* commits a stroke when you release the mouse. *Rebuild delay* batches quick strokes. *Keep binding when roots unchanged* keeps the binding of a bound groom (MetaHuman hair) while no curve is added or removed, so the hair does not disappear after a stroke: exact when no root moved, and after Slide (roots moved) every hair keeps following the skin it was on until the next bake brings the binding up to date. Thin, Add and Zone change the curves, so the binding rebuilds in the background: the editor stays usable and the hair is back after a moment. *Live rebuild while dragging (Beta)* updates during the drag at the cost of a full rebuild per interval.
 * **Rebuild Groom** rebuilds the derived data and the binding from the current curves.
 * **Bake to Asset** writes the edited curves into the groom asset and its Source description, so they survive saving and reloading.
 
@@ -128,6 +133,22 @@ Actions work on the whole groom and can be undone with **Undo Stroke**.
 
 <a href="assets/groom_actions.jpg"><img src="assets/groom_actions.jpg" alt="Groom actions"></a>
 
+### Simulation zones (Beta, added in version 0.2)
+
+Unreal simulates the **guides** of a hair group, and the strands follow their nearest guides. The simulation settings (on or off, stiffness, ...) belong to a hair group, so a group simulates as a whole. With the **Zone** tool you move the hair under the brush into another hair group and give that group its own simulation: some parts of the hair move, other parts stay still.
+
+1. Select the **Zone** tool. Tick the hair group the new zone is taken from (the first ticked group is used).
+2. Press **New zone: simulated** or **New zone: still**. The next stroke creates the new hair group, with the settings of the source group and the simulation on or off.
+3. Paint. The guides under the brush move into the new group, together with the strands that follow them. **Into** marks the group the brush paints into (the new one after the first stroke), **Back** the group Ctrl gives hair back to. Ctrl takes hair out of the Into group only.
+4. The **Sim** box of every group switches its simulation (the hair physics of the groom asset). **Merge** moves all the hair of a group into the Back group and removes the group.
+
+Things to know:
+
+* Every stroke, every Sim switch and every merge is one Undo step. Undo also brings back the settings of the hair groups.
+* A hair group keeps at least one guide and one strand.
+* On a MetaHuman groom the binding rebuilds itself when the groups change. Save the groom asset and its binding asset.
+* Sim only decides which hair groups use Unreal's hair simulation; the solver, gravity and wind are the ones of your groom and your level. Every hair group is drawn and shaded separately, so keep the number of groups small.
+
 ## 10. Hair material (Beta)
 
 Pick a preset in **HAIR MATERIAL** to create a physically based strand material instance for the ticked hair groups. Presets include Jet Black, Chestnut, Golden Blonde, Platinum, Copper Red, Silver Grey, Pastel Pink and Ash Blue.
@@ -155,10 +176,34 @@ The editor-only function library `GroomBrush` (category *GroomBrush*) can be cal
 * **The hair moves in big pieces**: the groom has few guides. Use *Fill Sparse* or *Add Random Guides*, or edit *Strands* directly.
 * **Clump has no effect**: the groom needs guides to clump onto.
 * **Slide and Add are Beta**: Slide is tested on bound MetaHuman grooms. Check the result and use Undo Stroke if it is not what you want.
+* **Zone moves nothing**: the brush must be over guides of a hair group that has at least two guides, the group must be ticked in the list, and the Into group (New zone or Into) must be set. A group is never emptied.
 * **Performance**: lower the brush radius, turn off *Live rebuild while dragging* and leave *Keep binding when roots unchanged* on.
-* **Other engine versions**: Groom Brush currently supports Unreal Engine 5.8 only.
+* **Other engine versions**: Groom Brush 0.2.0 supports Unreal Engine 5.8 and 5.9. Earlier versions such as 5.7 are not supported.
 
-## 14. License
+## 14. Release notes
+
+### 0.2.0 (Unreal Engine 5.8 and 5.9)
+
+**New**
+
+* **Zone (Beta)** tool: moves the hair under the brush into its own hair group, so that the group can have its own simulation while the rest of the hair stays still. A *Sim* switch per hair group, *Into* / *Back* / *Merge*, and full Undo and Redo, also for the settings of the hair groups (see *Simulation zones*).
+* **Viewport hotkeys**: hold **B**, **N** or **M** and move the mouse sideways to change the brush radius, strength or falloff. **-** **=** step the strength, **;** **'** the falloff and **,** **.** the tip weight. **F** keeps focusing the viewport.
+* The plugin builds for **Unreal Engine 5.9** as well as 5.8. There is one source package per engine version.
+
+**Changed**
+
+* The selection mask is drawn in **red**, so it no longer looks like the yellow selection of the editor.
+* **Faster rebuilds.** The groom is rebuilt once per commit: a bake rebuilt it twice, and a groom that stores several clump IDs per strand once more.
+* **Bound grooms (MetaHuman hair).** Slide no longer waits for the binding after every stroke: the binding is kept and rebuilt by the next bake. Thin, Add and Zone rebuild the binding in the background, so the editor stays usable and the hair is back after a moment (a stroke used to freeze the editor for about 4 seconds).
+* **Undo and Redo** are quicker on grooms with cards, and a state you return to a second time is restored from the cache.
+* The **first stroke** no longer pauses: the curve boxes and the scalp collision grid are built when the groom is loaded.
+* The user guide has this section and a chapter on simulation zones.
+
+### 0.1.0
+
+First release.
+
+## 15. License
 
 Groom Brush is commercial software. See `LICENSE.txt` in the plugin folder for the license terms.
 

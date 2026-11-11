@@ -2,7 +2,7 @@
 site_name: GroomBrush — User Guide
 site_url: https://mayalhc.github.io/GroomBrush_Wiki/
 site_author: chamiseul
-site_description: Groom Brush — hair brushes for Unreal Engine 5.8 grooms, in the level editor viewport
+site_description: Groom Brush — hair brushes for Unreal Engine 5.8 and 5.9 grooms, in the level editor viewport
 
 # 테마 설정 (다른 가이드와 같은 readthedocs 테마)
 theme:
