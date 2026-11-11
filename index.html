@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/GroomBrush_Wiki/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Welcome to GroomBrush - GroomBrush — User Guide</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to GroomBrush";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/GroomBrush_Wiki/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> GroomBrush — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">GroomBrush Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome to GroomBrush</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-requirements">1. Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-install">2. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-quick-start">3. Quick start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-mouse-and-keyboard">4. Mouse and keyboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-tools">5. Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-brush-settings">6. Brush settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#curves-guides-and-strands">Curves: guides and strands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update">Update</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-symmetry">7. Symmetry</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-selection-mask">8. Selection mask</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-groom-actions">9. Groom actions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#simulation-zones-beta-added-in-version-02">Simulation zones (Beta, added in version 0.2)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-hair-material-beta">10. Hair material (Beta)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#11-works-on-any-strand-groom">11. Works on any strand groom</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-blueprint-and-python">12. Blueprint and Python</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-tips-and-troubleshooting">13. Tips and troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-release-notes">14. Release notes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#020-unreal-engine-58">0.2.0 (Unreal Engine 5.8)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#010">0.1.0</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#15-license">15. License</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="KO_index/">한국어 가이드</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#1">1. 요구 사항</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#2">2. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#3">3. 빠른 시작</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#4">4. 마우스와 키보드</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#5">5. 도구</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#6">6. 브러시 설정</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="KO_index/#_1">곡선: 가이드와 스트랜드</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="KO_index/#_2">업데이트</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#7">7. 대칭</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#8">8. 선택 마스크</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#9">9. 그룸 액션</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="KO_index/#beta-02">시뮬레이션 영역 (Beta, 버전 0.2에서 추가)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#10-beta">10. 헤어 머티리얼 (Beta)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#11">11. 어떤 스트랜드 그룸에서도 동작</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#12">12. 블루프린트와 파이썬</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#13">13. 팁과 문제 해결</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#14">14. 릴리즈 노트</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="KO_index/#020-58">0.2.0 (언리얼 엔진 5.8)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="KO_index/#010">0.1.0</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="KO_index/#15">15. 라이선스</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/guides/">All add-ons & guides</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">GroomBrush — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">GroomBrush Guide</li>
+      <li class="breadcrumb-item active">Welcome to GroomBrush</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="groom-brush-user-guide-v020">Groom Brush — User Guide (v0.2.0)</h1>
+<p>🇺🇸 English | <a href="KO_index/">🇰🇷 한국어</a></p>
+<p>Groom Brush lets you comb, smooth, cut, clump, lift, curl and otherwise reshape the hair curves of a Groom asset <strong>directly in the Unreal Engine level editor viewport</strong>, with brushes, the way the hair brushes work in Blender. It also gives you a selection mask, symmetry, groom-wide actions (clumping, clump IDs, guides) and a physically based hair material with colour presets.</p>
+<p><a href="assets/viewport.jpg"><img src="assets/viewport.jpg" alt="Groom Brush in the Unreal Engine 5.8 viewport"></a></p>
+<p><em>Unreal Engine 5.8 editor captures. The pictures in this guide are composed from real captures of the plugin; the captions in the pictures were added afterwards.</em></p>
+<p>Groom Brush is sold on Fab by <a href="https://www.fab.com/sellers/Chamiseul%20Studio%20Ci">Chamiseul Studio Ci</a>. This guide is also included in the plugin as <code>Docs/GroomBrush_Guide.md</code>.</p>
+<h2 id="1-requirements">1. Requirements</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td>Unreal Engine 5.8</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Windows 64-bit, editor only (nothing is added to packaged games)</td>
+</tr>
+<tr>
+<td>Required plugin</td>
+<td><strong>Groom</strong> (plugin name <code>HairStrands</code>). It is enabled automatically together with Groom Brush.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>A Groom Asset (strand based hair) used by a Groom Component in your level, for example MetaHuman hair or your own grooms.</td>
+</tr>
+</tbody>
+</table>
+<p>A groom does not need a binding. If the groom has a Groom Binding, Groom Brush uses the binding's skin mesh as the scalp. Otherwise it looks for the skeletal mesh the groom hangs on or overlaps in the level, and as a last resort it uses the surface the hair roots make.</p>
+<h2 id="2-install">2. Install</h2>
+<ol>
+<li>Install the plugin to your engine from the Epic Games launcher / Fab, or copy the <code>GroomBrush</code> folder into the <code>Plugins</code> folder of your project.</li>
+<li>Open the project. If Unreal asks to rebuild the module, choose <strong>Yes</strong>.</li>
+<li>Check that <strong>Edit &gt; Plugins &gt; Hair &gt; Groom Brush</strong> is enabled and restart the editor if asked.</li>
+</ol>
+<h2 id="3-quick-start">3. Quick start</h2>
+<ol>
+<li>Place an actor with a Groom Component in the level (for example a MetaHuman) and <strong>select it</strong>.</li>
+<li>Click the <strong>Groom Brush</strong> button in the level editor toolbar, or open <strong>Window &gt; Groom Brush</strong>. The Groom Brush panel opens.</li>
+<li>Press <strong>Activate Mode</strong>. The viewport now paints hair with the selected tool.</li>
+<li>Pick a tool (keys <strong>1-9</strong>, <strong>0</strong> for the mask), set Radius and Strength, and drag over the hair. The curves under the brush are drawn as lines, so you see exactly what a stroke changes.</li>
+<li>Work on a different groom component of the same actor (hair, beard, eyebrows ...) with the <strong>&lt;</strong> and <strong>&gt;</strong> buttons.</li>
+<li>When you are happy press <strong>Bake to Asset</strong>, then save the Groom Asset in the Content Browser.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Make a backup</p>
+<p>Groom Brush edits the groom asset itself, not a copy. Duplicate the groom asset (or keep your project under version control) before you start. <strong>Undo Stroke</strong> restores the curves from before the last stroke while the mode is active.</p>
+</div>
+<p><a href="assets/panel.jpg"><img src="assets/panel.jpg" alt="The Groom Brush panel"></a></p>
+<h2 id="4-mouse-and-keyboard">4. Mouse and keyboard</h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left mouse button</td>
+<td>Paint with the selected tool</td>
+</tr>
+<tr>
+<td>Shift + left mouse button, or right mouse button</td>
+<td>Smooth (with any tool)</td>
+</tr>
+<tr>
+<td>Ctrl + left mouse button</td>
+<td>Invert the tool (spread, push, shrink, remove guides, erase mask ...)</td>
+</tr>
+<tr>
+<td><strong>1 ... 9</strong>, <strong>0</strong></td>
+<td>Comb, Smooth, Cut, Clump, Lift, Length, Straighten, Frizz, Thin, Mask</td>
+</tr>
+<tr>
+<td><strong>[</strong> and <strong>]</strong></td>
+<td>Smaller / bigger brush</td>
+</tr>
+<tr>
+<td>Hold <strong>B</strong>, <strong>N</strong> or <strong>M</strong> and move the mouse sideways</td>
+<td>Adjust the brush radius (B), strength (N) or falloff (M) live (version 0.2). The brush stays where it is, and <strong>F</strong> keeps focusing the viewport</td>
+</tr>
+<tr>
+<td><strong>-</strong> and <strong>=</strong></td>
+<td>Lower / higher strength (version 0.2)</td>
+</tr>
+<tr>
+<td><strong>;</strong> and <strong>'</strong></td>
+<td>Lower / higher falloff (version 0.2)</td>
+</tr>
+<tr>
+<td><strong>,</strong> and <strong>.</strong></td>
+<td>Lower / higher tip weight (version 0.2)</td>
+</tr>
+<tr>
+<td>Ctrl + Z, Ctrl + Shift + Z or Ctrl + Y</td>
+<td>Undo stroke, redo stroke</td>
+</tr>
+<tr>
+<td>Esc while stroking</td>
+<td>Cancel the stroke</td>
+</tr>
+<tr>
+<td>Middle mouse button</td>
+<td>Viewport navigation as usual</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-tools">5. Tools</h2>
+<p><a href="assets/tools.jpg"><img src="assets/tools.jpg" alt="The brushes"></a></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Comb</strong></td>
+<td>Drags the hair along the cursor. Roots stay pinned. <em>Keep segment length</em> lets the hair swing after the moved point instead of stretching.</td>
+</tr>
+<tr>
+<td><strong>Smooth</strong></td>
+<td>Relaxes curves towards the average of their neighbours.</td>
+</tr>
+<tr>
+<td><strong>Cut</strong></td>
+<td>Scissors. Cuts every touched strand where it enters the brush (sphere) or along one line (plane, horizontal on screen or at a world height). Options: keep root, jitter, keep at least, keep point count, soft edge.</td>
+</tr>
+<tr>
+<td><strong>Clump</strong></td>
+<td>Pinches hair together. Modes: pull to the brush axis, to the nearest guide, or to the middle of each clump. Options: start, shape, twist, noise. Ctrl spreads.</td>
+</tr>
+<tr>
+<td><strong>Lift</strong></td>
+<td>Pulls hair towards the camera or straight up. Ctrl pushes it back.</td>
+</tr>
+<tr>
+<td><strong>Length</strong></td>
+<td>Grows the touched curves. Ctrl shrinks them.</td>
+</tr>
+<tr>
+<td><strong>Straighten</strong></td>
+<td>Straightens curves along root to tip, keeping their length.</td>
+</tr>
+<tr>
+<td><strong>Frizz</strong></td>
+<td>Waves, curls or kinks. Curl size and frequency are adjustable. Hold the brush longer for a stronger pattern.</td>
+</tr>
+<tr>
+<td><strong>Thin</strong></td>
+<td>Deletes strands under the brush. Guides are never deleted.</td>
+</tr>
+<tr>
+<td><strong>Guide</strong></td>
+<td>Promotes the strands under the brush to guides. Ctrl removes guides (one always stays).</td>
+</tr>
+<tr>
+<td><strong>Puff</strong></td>
+<td>Stands the hair up at the roots along the scalp normal for volume. Ctrl lays it down flat.</td>
+</tr>
+<tr>
+<td><strong>Slide (Beta)</strong></td>
+<td>Moves whole hairs over the scalp, roots included. Tested on bound MetaHuman grooms.</td>
+</tr>
+<tr>
+<td><strong>Add (Beta)</strong></td>
+<td>Plants new strands on the scalp under the brush, shaped like the hair around them. Ctrl thins. Works on strands.</td>
+</tr>
+<tr>
+<td><strong>Zone (Beta)</strong></td>
+<td>Moves the hair under the brush into another hair group, so that the group can have its own simulation (see <em>Simulation zones</em>). Ctrl moves it back.</td>
+</tr>
+<tr>
+<td><strong>Mask</strong></td>
+<td>Paints which hair the other tools may edit (see section 8).</td>
+</tr>
+</tbody>
+</table>
+<p>Each tool shows its own options in the <strong>TOOL OPTIONS</strong> section of the panel.</p>
+<p><a href="assets/new_tools.jpg"><img src="assets/new_tools.jpg" alt="Frizz curls, Puff and Add"></a></p>
+<h2 id="6-brush-settings">6. Brush settings</h2>
+<ul>
+<li><strong>Radius</strong> (cm), <strong>Strength</strong>, <strong>Falloff</strong> and <strong>Tip Weight</strong> shape the brush. A preview of the falloff is drawn in the panel.</li>
+<li><strong>Presets</strong>: Soft, Sharp, Tips Only and Reset change only the brush values, never the groom.</li>
+<li><strong>Front side only</strong> and <strong>Front depth</strong> keep a stroke on the visible side of the groom so the hidden back is untouched.</li>
+<li><strong>Projected falloff</strong> reaches everything under the brush circle on screen, good for silhouettes.</li>
+<li><strong>Scalp collision</strong> and <strong>Skin offset</strong>: no brush pushes hair into the head. Points that would go under the skin are put back on it, to the offset you set. Hair that already is under the skin stays where it is.</li>
+</ul>
+<p><a href="assets/scalp_collision.jpg"><img src="assets/scalp_collision.jpg" alt="Scalp collision"></a></p>
+<h3 id="curves-guides-and-strands">Curves: guides and strands</h3>
+<ul>
+<li><strong>Guides</strong> edits the guide curves (cyan). <strong>Strands</strong> edits the rendered strand curves (orange). Tick both to edit both.</li>
+<li><strong>Strands follow guides</strong>: when only guides are edited, each strand follows its three nearest guides, like guide interpolation in Blender.</li>
+<li><strong>Hair groups</strong>: choose which hair groups of the groom are edited (All, Only, or tick individual groups). <strong>Fill Sparse</strong> adds guides to groups that have too few.</li>
+</ul>
+<h3 id="update">Update</h3>
+<ul>
+<li><em>Rebuild on stroke end</em> commits a stroke when you release the mouse. <em>Rebuild delay</em> batches quick strokes. <em>Keep binding when roots unchanged</em> keeps the binding of a bound groom (MetaHuman hair) while no curve is added or removed, so the hair does not disappear after a stroke: exact when no root moved, and after Slide (roots moved) every hair keeps following the skin it was on until the next bake brings the binding up to date. Thin, Add and Zone change the curves, so the binding rebuilds in the background: the editor stays usable and the hair is back after a moment. <em>Live rebuild while dragging (Beta)</em> updates during the drag at the cost of a full rebuild per interval.</li>
+<li><strong>Rebuild Groom</strong> rebuilds the derived data and the binding from the current curves.</li>
+<li><strong>Bake to Asset</strong> writes the edited curves into the groom asset and its Source description, so they survive saving and reloading.</li>
+</ul>
+<h2 id="7-symmetry">7. Symmetry</h2>
+<p>Turn on <strong>Symmetry</strong> and tick <strong>X</strong>, <strong>Y</strong> and/or <strong>Z</strong>. Every stroke is repeated mirrored across the enabled planes, on guides and strands. Two axes make three copies, three axes make seven. The planes can pass through the groom origin (the middle of the head for a MetaHuman groom) or through the centre of the groom's bounds. <em>Show planes</em> draws the planes and the mirrored brushes in the viewport.</p>
+<p><a href="assets/symmetry.jpg"><img src="assets/symmetry.jpg" alt="Symmetry"></a></p>
+<h2 id="8-selection-mask">8. Selection mask</h2>
+<p>The mask works like Selection Paint in Blender: it limits which hair the other tools may change.</p>
+<ul>
+<li>Select the <strong>Mask</strong> tool (key 0) and paint. Ctrl + paint protects hair.</li>
+<li><strong>Invert</strong>, <strong>Protect All</strong>, <strong>Clear Mask</strong>, <strong>Grow</strong>, <strong>Shrink</strong>, <strong>Smooth</strong>, <strong>Whole Clumps</strong> and <strong>By Length</strong> edit the selection.</li>
+<li><strong>Use mask</strong> switches the limit on and off, <strong>Show mask</strong> and <strong>X-ray</strong> draw the selection, <strong>Keep between sessions</strong> stores the mask under <code>Saved/GroomBrush/Masks</code> of your project. The mask is never written into the groom asset.</li>
+</ul>
+<p><a href="assets/mask.jpg"><img src="assets/mask.jpg" alt="Selection mask"></a></p>
+<h2 id="9-groom-actions">9. Groom actions</h2>
+<p>Actions work on the whole groom and can be undone with <strong>Undo Stroke</strong>.</p>
+<ul>
+<li><strong>Clump Strands to Guides</strong>: pulls every strand onto its nearest guide. Sliders: Clump amount, start, shape, twist, noise. With <strong>Live (Beta)</strong> on, the groom follows the sliders and the button accepts the result. The groom needs guides; use the Guide tool or <em>Add Random Guides</em> first.</li>
+<li><strong>Assign Clump IDs</strong>: every strand gets the clump ID of its nearest guide (Clump size, Clump seed). Unreal uses clump IDs for shading and simulation.</li>
+<li><strong>Add Random Guides</strong> (percentage of strands) and <strong>Set Guide Resolution</strong> (control points per guide).</li>
+<li><strong>Show all guides</strong> draws every guide of the ticked hair groups. Unreal never renders guides, so this is the only way to see them.</li>
+</ul>
+<p><a href="assets/groom_actions.jpg"><img src="assets/groom_actions.jpg" alt="Groom actions"></a></p>
+<h3 id="simulation-zones-beta-added-in-version-02">Simulation zones (Beta, added in version 0.2)</h3>
+<p>Unreal simulates the <strong>guides</strong> of a hair group, and the strands follow their nearest guides. The simulation settings (on or off, stiffness, ...) belong to a hair group, so a group simulates as a whole. With the <strong>Zone</strong> tool you move the hair under the brush into another hair group and give that group its own simulation: some parts of the hair move, other parts stay still.</p>
+<ol>
+<li>Select the <strong>Zone</strong> tool. Tick the hair group the new zone is taken from (the first ticked group is used).</li>
+<li>Press <strong>New zone: simulated</strong> or <strong>New zone: still</strong>. The next stroke creates the new hair group, with the settings of the source group and the simulation on or off.</li>
+<li>Paint. The guides under the brush move into the new group, together with the strands that follow them. <strong>Into</strong> marks the group the brush paints into (the new one after the first stroke), <strong>Back</strong> the group Ctrl gives hair back to. Ctrl takes hair out of the Into group only.</li>
+<li>The <strong>Sim</strong> box of every group switches its simulation (the hair physics of the groom asset). <strong>Merge</strong> moves all the hair of a group into the Back group and removes the group.</li>
+</ol>
+<p>Things to know:</p>
+<ul>
+<li>Every stroke, every Sim switch and every merge is one Undo step. Undo also brings back the settings of the hair groups.</li>
+<li>A hair group keeps at least one guide and one strand.</li>
+<li>On a MetaHuman groom the binding rebuilds itself when the groups change. Save the groom asset and its binding asset.</li>
+<li>Sim only decides which hair groups use Unreal's hair simulation; the solver, gravity and wind are the ones of your groom and your level. Every hair group is drawn and shaded separately, so keep the number of groups small.</li>
+</ul>
+<h2 id="10-hair-material-beta">10. Hair material (Beta)</h2>
+<p>Pick a preset in <strong>HAIR MATERIAL</strong> to create a physically based strand material instance for the ticked hair groups. Presets include Jet Black, Chestnut, Golden Blonde, Platinum, Copper Red, Silver Grey, Pastel Pink and Ash Blue.</p>
+<p><a href="assets/hair_material.jpg"><img src="assets/hair_material.jpg" alt="Hair material presets"></a></p>
+<ul>
+<li>The material instance is saved as <code>MI_&lt;groom&gt;_GroomBrushHair</code> in <code>/Game/GroomBrush/Materials/Instances</code>.</li>
+<li>Sliders: melanin, redness, roughness, grey strands, root and tip shading, highlights, per-clump variation, dye strength and ombre, specular, backlit and ambient occlusion.</li>
+<li><strong>Write into the groom asset</strong> sets the material in the asset's material slots. Off: only the selected component is overridden.</li>
+<li><strong>Open Material</strong> opens the instance with every parameter. <strong>Restore Original</strong> removes this component's overrides.</li>
+<li>The presets are tuned by hand and may change in an update.</li>
+</ul>
+<h2 id="11-works-on-any-strand-groom">11. Works on any strand groom</h2>
+<p><a href="assets/any_groom.jpg"><img src="assets/any_groom.jpg" alt="Six different grooms"></a></p>
+<h2 id="12-blueprint-and-python">12. Blueprint and Python</h2>
+<p>The editor-only function library <code>GroomBrush</code> (category <em>GroomBrush</em>) can be called from Editor Utility Blueprints and Python: <code>ApplyBrushToGroom</code>, <code>CombGroom</code>, <code>SmoothGroom</code>, <code>ClumpGroomToGuides</code>, <code>AssignGroomClumpIDs</code>, <code>AddGroomRandomGuides</code>, <code>FillGroomSparseGuides</code>, <code>ResampleGroomGuides</code> and <code>GetGroomStats</code>. Brush defaults are stored in the project's editor config and can be changed in the Groom Brush settings.</p>
+<h2 id="13-tips-and-troubleshooting">13. Tips and troubleshooting</h2>
+<ul>
+<li><strong>"Select an actor that has a groom component with a groom asset"</strong>: select the actor in the level first, then press Activate Mode.</li>
+<li><strong>Nothing changes under the brush</strong>: check that <em>Guides</em> or <em>Strands</em> is ticked under CURVES, that the hair group is ticked, and that <em>Use mask</em> is not hiding the area. If a Groom Cache is assigned, tick <em>Ignore groom cache</em>.</li>
+<li><strong>The hair moves in big pieces</strong>: the groom has few guides. Use <em>Fill Sparse</em> or <em>Add Random Guides</em>, or edit <em>Strands</em> directly.</li>
+<li><strong>Clump has no effect</strong>: the groom needs guides to clump onto.</li>
+<li><strong>Slide and Add are Beta</strong>: Slide is tested on bound MetaHuman grooms. Check the result and use Undo Stroke if it is not what you want.</li>
+<li><strong>Zone moves nothing</strong>: the brush must be over guides of a hair group that has at least two guides, the group must be ticked in the list, and the Into group (New zone or Into) must be set. A group is never emptied.</li>
+<li><strong>Performance</strong>: lower the brush radius, turn off <em>Live rebuild while dragging</em> and leave <em>Keep binding when roots unchanged</em> on.</li>
+<li><strong>Other engine versions</strong>: Groom Brush currently supports Unreal Engine 5.8 only.</li>
+</ul>
+<h2 id="14-release-notes">14. Release notes</h2>
+<h3 id="020-unreal-engine-58">0.2.0 (Unreal Engine 5.8)</h3>
+<p><strong>New</strong></p>
+<ul>
+<li><strong>Zone (Beta)</strong> tool: moves the hair under the brush into its own hair group, so that the group can have its own simulation while the rest of the hair stays still. A <em>Sim</em> switch per hair group, <em>Into</em> / <em>Back</em> / <em>Merge</em>, and full Undo and Redo, also for the settings of the hair groups (see <em>Simulation zones</em>).</li>
+<li><strong>Viewport hotkeys</strong>: hold <strong>B</strong>, <strong>N</strong> or <strong>M</strong> and move the mouse sideways to change the brush radius, strength or falloff. <strong>-</strong> <strong>=</strong> step the strength, <strong>;</strong> <strong>'</strong> the falloff and <strong>,</strong> <strong>.</strong> the tip weight. <strong>F</strong> keeps focusing the viewport.</li>
+</ul>
+<p><strong>Changed</strong></p>
+<ul>
+<li>The selection mask is drawn in <strong>red</strong>, so it no longer looks like the yellow selection of the editor.</li>
+<li><strong>Faster rebuilds.</strong> The groom is rebuilt once per commit: a bake rebuilt it twice, and a groom that stores several clump IDs per strand once more.</li>
+<li><strong>Bound grooms (MetaHuman hair).</strong> Slide no longer waits for the binding after every stroke: the binding is kept and rebuilt by the next bake. Thin, Add and Zone rebuild the binding in the background, so the editor stays usable and the hair is back after a moment (a stroke used to freeze the editor for about 4 seconds).</li>
+<li><strong>Undo and Redo</strong> are quicker on grooms with cards, and a state you return to a second time is restored from the cache.</li>
+<li>The <strong>first stroke</strong> no longer pauses: the curve boxes and the scalp collision grid are built when the groom is loaded.</li>
+<li>The user guide has this section and a chapter on simulation zones.</li>
+</ul>
+<h3 id="010">0.1.0</h3>
+<p>First release.</p>
+<h2 id="15-license">15. License</h2>
+<p>Groom Brush is commercial software. See <code>LICENSE.txt</code> in the plugin folder for the license terms.</p>
+<p>Copyright 2026 Chamiseul Studio Ci. All Rights Reserved.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="KO_index/" class="btn btn-neutral float-right" title="한국어 가이드">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="KO_index/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
